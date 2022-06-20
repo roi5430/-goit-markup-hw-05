@@ -4,7 +4,7 @@
 /* ефект #2196F3 */
 /* чорний #000000 */
 
-*/ p,
+p,
 h1,
 h2,
 h3,
@@ -235,14 +235,13 @@ ul {
   margin-top: var(--typical-margin);
   padding: 10px 32px;
 
-  transition: box-shadow var(--timing-function);
+  transition: box-shadow var(--timing-function), background-color var(--timing-function);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background: #188ce8;
+  background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 
 .portfolio-title,
@@ -291,8 +290,6 @@ ul {
   text-transform: uppercase;
 
   color: var(--title-color);
-
-  margin-bottom: 10px;
 }
 
 .text {
@@ -600,21 +597,14 @@ address {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  margin-right: calc(-1 * var(--typical-margin));
+  margin-bottom: calc(-1 * var(--typical-margin));
 }
 
 .element {
-  width: calc(100% / 3 - 30px);
+  width: calc(100% / 3 - var(--typical-margin));
   margin-right: var(--typical-margin);
   margin-bottom: var(--typical-margin);
-}
-
-.element:nth-child(3n) {
-  margin-right: 0;
-}
-
-.element:nth-last-child(-n + 3) {
-  margin-bottom: 0;
 }
 
 .link-work {
@@ -633,9 +623,13 @@ address {
 
 .text-action {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  padding: 0 24px 0 24px;
   margin: 0;
   top: 0;
   left: 0;
@@ -718,9 +712,17 @@ li > p {
   width: 30px;
   top: 8px;
   right: 8px;
+  cursor: pointer;
 
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill var(--timing-function), filter var(--timing-function);
+}
+
+.close:hover,
+.close:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
+  fill: var(--accent-color);
 }
 
 .close-black {
