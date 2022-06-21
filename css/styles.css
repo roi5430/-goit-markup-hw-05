@@ -288,6 +288,7 @@ ul {
   font-size: 14px;
   line-height: 1.2;
   text-transform: uppercase;
+  margin-bottom: 10px;
 
   color: var(--title-color);
 }
@@ -440,12 +441,13 @@ ul {
 .clients-list {
   display: flex;
   align-items: center;
-  justify-content: center;
+
+  margin-right: calc(-1 * var(--typical-margin));
 }
 
 .client-item {
   margin-right: var(--typical-margin);
-  width: calc(100% / 6 - 30px);
+  width: calc(100% / 6 - var(--typical-margin));
 }
 
 .client-item:last-child {
@@ -581,7 +583,7 @@ address {
   border: none;
   padding: 6px 22px;
 
-  transition: babackground-color var(--timing-function), color var(--timing-function);
+  transition: background-color var(--timing-function), color var(--timing-function);
 }
 
 .filters-btn:focus,
@@ -609,6 +611,9 @@ address {
 
 .link-work {
   transition: filter var(--timing-function);
+  display: block;
+  color: var(--primary-text-color);
+  text-decoration: none;
 }
 
 .link-work:hover,
@@ -668,6 +673,7 @@ address {
 }
 li > p {
   line-height: 1.9;
+  color: var(--primary-text-color);
 }
 
 /* --------Modal-------- */
