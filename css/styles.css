@@ -583,7 +583,8 @@ address {
   border: none;
   padding: 6px 22px;
 
-  transition: background-color var(--timing-function), color var(--timing-function);
+  transition: background-color var(--timing-function), color var(--timing-function),
+    filter var(--timing-function);
 }
 
 .filters-btn:focus,
@@ -617,7 +618,7 @@ address {
 }
 
 .link-work:hover,
-.link-work :focus {
+.link-work:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
